@@ -3,7 +3,7 @@
 
 
 
-[Website](https://traque.xyz) | [Twitter](https://twitter.com/TraqueAi)
+[Website](https://traque.cc) | [Twitter](https://twitter.com/TraqueAi)
 
 
 ## Features
