@@ -1,5 +1,7 @@
 # Traque Ai powered by RAG
-![RAQ (1)](https://github.com/user-attachments/assets/bf3d8374-ef66-4a7f-a043-5253e0d9ce4b)
+![RAQ (1)](https://github.com/user-attachments/assets/afc2009b-2c90-4c17-8a93-dc5b7eb79e5e)
+
+
 
 [Website](https://traque.xyz) | [Twitter](https://twitter.com/TraqueAi)
 
