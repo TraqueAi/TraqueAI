@@ -1,0 +1,119 @@
+{
+  "test_cases_lookup_map": {
+    "{\"actual_output\": \"We offer a 30-day full refund at no extra cost.\", \"context\": null, \"expected_output\": null, \"hyperparameters\": null, \"input\": \"What if these shoes don't fit?\", \"retrieval_context\": null}": {
+      "cached_metrics_data": [
+        {
+          "metric_metadata": {
+            "metric": "Answer Relevancy",
+            "threshold": 0.7,
+            "success": true,
+            "score": 1.0,
+            "reason": "The score is 1.00 because the response perfectly addressed the query without any irrelevant information.",
+            "strictMode": false,
+            "evaluationModel": "gpt-4",
+            "evaluationCost": 0,
+            "verboseLogs": "Statements:\n[\n    \"We offer a 30-day full refund at no extra cost.\"\n]\n\nVerdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": null\n    }\n]"
+          },
+          "metric_configuration": {
+            "threshold": 0.7,
+            "evaluation_model": "gpt-4",
+            "strict_mode": false,
+            "include_reason": true
+          }
+        }
+      ]
+    },
+    "{\"actual_output\": \"We offer a 30-day full refund at no extra cost.\", \"context\": null, \"expected_output\": \"We offer a 40-day full refund at no extra cost\", \"hyperparameters\": null, \"input\": \"What if these shoes don't fit?\", \"retrieval_context\": null}": {
+      "cached_metrics_data": [
+        {
+          "metric_metadata": {
+            "metric": "Answer Relevancy",
+            "threshold": 0.7,
+            "success": true,
+            "score": 1.0,
+            "reason": "The score is 1.00 because the response accurately addresses the concern about the fit of the shoes.",
+            "strictMode": false,
+            "evaluationModel": "gpt-4",
+            "evaluationCost": 0,
+            "verboseLogs": "Statements:\n[\n    \"We offer a 30-day full refund at no extra cost\"\n]\n\nVerdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": null\n    }\n]"
+          },
+          "metric_configuration": {
+            "threshold": 0.7,
+            "evaluation_model": "gpt-4",
+            "strict_mode": false,
+            "include_reason": true
+          }
+        }
+      ]
+    },
+    "{\"actual_output\": \"We offer a 30-day full refund at no extra cost.\", \"context\": [\"We offer a 40-day full refund at no extra cost\"], \"expected_output\": null, \"hyperparameters\": null, \"input\": \"What if these shoes don't fit?\", \"retrieval_context\": null}": {
+      "cached_metrics_data": [
+        {
+          "metric_metadata": {
+            "metric": "Answer Relevancy",
+            "threshold": 0.7,
+            "success": true,
+            "score": 1.0,
+            "reason": "The score is 1.00 because the response completely and accurately addressed the concern raised in the question.",
+            "strictMode": false,
+            "evaluationModel": "gpt-4",
+            "evaluationCost": 0,
+            "verboseLogs": "Statements:\n[\n    \"We offer a 30-day full refund at no extra cost.\"\n]\n\nVerdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": null\n    }\n]"
+          },
+          "metric_configuration": {
+            "threshold": 0.7,
+            "evaluation_model": "gpt-4",
+            "strict_mode": false,
+            "include_reason": true
+          }
+        }
+      ]
+    },
+    "{\"actual_output\": \"We offer a 30-day full refund at no extra cost.\", \"context\": null, \"expected_output\": null, \"hyperparameters\": null, \"input\": \"What if these shoes don't fit?\", \"retrieval_context\": [\"We offer a 40-day full refund at no extra cost\"]}": {
+      "cached_metrics_data": [
+        {
+          "metric_metadata": {
+            "metric": "Answer Relevancy",
+            "threshold": 0.7,
+            "success": false,
+            "score": 0.0,
+            "reason": "The score is 0.00 because the actual output provided statements that were completely unrelated to the input question, discussing shoe refunds instead of addressing the issue of poorly fitting shoes.",
+            "strictMode": false,
+            "evaluationModel": "lmstudio-community/Meta-Llama-3-8B-Instruct-GGUF",
+            "evaluationCost": 0,
+            "verboseLogs": "Statements:\n[\n    \"We offer a 30-day full refund\",\n    \"at no extra cost\"\n]\n\nVerdicts:\n[\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"The statements provided are about shoe refunds and are not related to the input question, which asks about what to do if shoes don't fit.\"\n    }\n]"
+          },
+          "metric_configuration": {
+            "threshold": 0.7,
+            "evaluation_model": "lmstudio-community/Meta-Llama-3-8B-Instruct-GGUF",
+            "strict_mode": false,
+            "include_reason": true
+          }
+        }
+      ]
+    },
+    "{\"actual_output\": \"We offer a 300-day full refund at no extra cost.\", \"context\": null, \"expected_output\": \"You are eligible for a 30 day full refund at no extra cost.\", \"hyperparameters\": null, \"input\": \"What if these shoes don't fit?\", \"retrieval_context\": [\"All customers are eligible for a 30 day full refund at no extra cost.\"]}": {
+      "cached_metrics_data": [
+        {
+          "metric_metadata": {
+            "metric": "Contextual Precision",
+            "threshold": 0.7,
+            "success": true,
+            "score": 1.0,
+            "reason": "The score is 1.00 because the only node in the retrieval context directly addresses the user's concern about shoes not fitting, hence its high relevance and top ranking.",
+            "strictMode": false,
+            "evaluationModel": "gpt-4",
+            "evaluationCost": 0,
+            "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"The text 'All customers are eligible for a 30 day full refund at no extra cost.' directly addresses the concern about shoes not fitting.\"\n    }\n]"
+          },
+          "metric_configuration": {
+            "threshold": 0.7,
+            "evaluation_model": "gpt-4",
+            "strict_mode": false,
+            "include_reason": true
+          }
+        }
+      ]
+    }
+  }
+}

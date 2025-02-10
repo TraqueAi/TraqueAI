@@ -1,0 +1,47 @@
+services:
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: qdrantt
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+    volumes:
+      - ./qdrant_storage:/qdrant/storage
+    networks:
+      - app-network
+
+  ollamaa:
+    image: ollama/ollama:latest
+    container_name: ollamaa
+    volumes:
+      - ollama:/root/.ollama
+    ports:
+      - "11434:11434"
+    networks:
+      - app-network
+    entrypoint: ["bash","run.sh"]
+
+  bayesrag:
+    build: .
+    container_name: bayesrag_cont
+    stdin_open: true
+    tty: true
+    depends_on:
+      - qdrant
+      - ollamaa
+    environment:
+      - DATA_DIR=/data
+      - NODETYPE=admin
+      - QDRANT_HOST=http://qdrant:6333
+    volumes:
+      - ./data:/data
+    networks:
+      - app-network
+    command: ["python", "main.py", "--data-dir", "/data", "--nodetype", "admin"]
+
+volumes:
+  ollama:
+
+networks:
+  app-network:
+    driver: bridge
