@@ -120,5 +120,5 @@ Replace `data` with the desired data directory. Set `--nodetype` to either `admi
 
 ---
 
-For more details, check the [GitHub repository](https://github.com/TraqueAi/Traque-AI).
+For more details, check the [Docs](https://github.com/TraqueAi/TraqueAI).
 
